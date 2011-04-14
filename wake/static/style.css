@@ -1,13 +1,65 @@
-#stream { font-family:sans-serif; }
-ul#stream li { padding-left:22px; }
+body
+{
+	background:url('img/bg.png');
+	color:#333;
+	font: normal 12pt "Trebuchet MS", Helvetica, Arial, sans-serif;
+	padding:0;
+	margin:0;
+}
 
-#stream a, #stream a:visited { text-decoration:none; color:#012 }
+header
+{
+	background:#3465a4;
+	border-bottom:1px solid #204a87;
+	text-shadow: rgba(0,0,0,0.2) 2px 2px 1px;
+	-webkit-box-shadow: 0px -5px 5px rgba(0,0,0,0.1) inset;
+	-moz-box-shadow: 0px -5px 5px rgba(0,0,0,0.1) inset;
+}
+
+header h1
+{
+	text-align:center; 
+	margin:0;
+	padding:10px;
+	color:#fff;
+}
+
+#stream { max-width: 700px; margin:0 auto; padding:20px }
+#stream article
+{
+	padding:5px 5px 5px 22px;
+	text-shadow:0px 1px rgba(255, 255, 255, 0.5); 
+	border-bottom:1px solid #bbb;
+	background-position: left 7px;
+	background-repeat:no-repeat;
+}
+
+#stream a, #stream a:visited { text-decoration:none; color:#123 }
 #stream a:hover { text-decoration:underline }
 
+#stream time { color:#888; font-size:70% }
+#stream blockquote
+{
+	text-shadow:none;
+	margin:0;
+	padding:7px;
+	border:1px solid #ccc;
+	background-color:#eeeeec;
+    -moz-border-radius:4px;
+    -webkit-border-radius:5px;
+    -webkit-box-shadow:1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:1px 1px rgba(0,0,0,0.2);
+}
+
+#stream blockquote a { color: #555 !important }
+
+#stream article.twitter { padding-top:10px; background-position:left 20px }
+#stream article.flickr img { padding:5px; background-color:#eeeeec; border:1px solid #aaa }
+
 /* TODO: embed these into the CSS */
-ul#stream li.github { background:url(/static/icon/github.ico) left center no-repeat; }
-ul#stream li.lastfm { background:url(/static/icon/lastfm.ico) left center no-repeat; }
-ul#stream li.twitter { background:url(/static/icon/twitter.ico) left center no-repeat; }
-ul#stream li.grooveshark { background:url(/static/icon/grooveshark.ico) left center no-repeat; }
-ul#stream li.flickr { background:url(/static/icon/flickr.ico) left center no-repeat; }
-ul#stream li.delicious { background:url(/static/icon/delicious.ico) left center no-repeat; }
+#stream article.github { background-image:url(/static/icon/github.ico) }
+#stream article.lastfm { background-image:url(/static/icon/lastfm.ico) }
+#stream article.twitter { background-image:url(/static/icon/twitter.ico) }
+#stream article.grooveshark { background-image:url(/static/icon/grooveshark.ico) }
+#stream article.flickr { background-image:url(/static/icon/flickr.ico) }
+#stream article.delicious { background-image:url(/static/icon/delicious.ico) }

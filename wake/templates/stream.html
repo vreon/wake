@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 {% block stream %}
-<ul id="stream">
+<section id="stream">
   {% set all_kinds = ['twitter', 'github', 'lastfm', 'grooveshark', 'flickr', 'delicious'] %}
   {% for event in events %}
-    <li class="{{ event['kind'] }}">
+    <article class="{{ event['kind'] }}">
 		{% if event.kind in all_kinds %}
 			{% include "kinds/" + event.kind + ".html" %}
 		{% else %}
 			{% include "kinds/generic.html" %}
 		{% endif %}
-	</li>
+	</article>
   {% endfor %}
-</ul>
+</section>
 {% endblock %}

@@ -1,1 +1,4 @@
-<a href="{{ event.event_link }}">{{ event.summary|safe }}</a>
+<a href="{{ event.event_link }}">{{ event.summary|safe }}</a> <time>{{ event.timestamp|relativetime }}</time>
+<p>
+	<a href="{{ event.event_link }}"><img src="{{ event.data.media_thumbnail[0].url }}" title="{{ event.data.title }}" /></a>
+</p>
