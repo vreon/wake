@@ -1,2 +1,5 @@
 posted <strong>{{ event.title }}</strong>
-<blockquote>{{ event.content|markdown }}</blockquote> <time>{{ event.timestamp|relativetime }}</time>
+<time>{{ event.timestamp|relativetime }}</time>
+<div class="panel">
+	{{ event.content|markdown }}
+</div>

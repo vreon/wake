@@ -1,0 +1,16 @@
+{% if event.children|count == 1 %}
+	{% with song = event.children[0] %}
+		<a href="{{ song.event_link }}">{{ song.summary|safe }}</a>
+		<time pubdate>{{ event.timestamp|relativetime }}</time>
+	{% endwith %}
+{% else %}
+	<a href="#" class="expand">favorited {{ event.children|count }} songs <span class="indicator">&raquo;</span></a>
+	<time pubdate>{{ event.timestamp|relativetime }}</time>
+	<div class="detail">
+		<ul>
+			{% for child in event.children %}
+				<li><a href="{{ child.event_link }}">{{ child.data.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}

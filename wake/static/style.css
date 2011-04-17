@@ -24,6 +24,15 @@ header h1
 	color:#fff;
 }
 
+footer
+{
+	color:#888;
+	padding-bottom:50px;
+	text-align:center;
+}
+
+footer img { vertical-align:middle }
+
 #stream { max-width: 700px; margin:0 auto; padding:20px }
 #stream article
 {
@@ -38,7 +47,7 @@ header h1
 #stream a:hover { text-decoration:underline }
 
 #stream time { color:#888; font-size:70% }
-#stream blockquote
+#stream blockquote, #stream .panel
 {
 	text-shadow:none;
 	margin:0;
@@ -49,12 +58,14 @@ header h1
     -moz-box-shadow:1px 1px rgba(0,0,0,0.2);
 }
 
+#stream article .detail { font-size:80%; display:none }
+#stream ul { padding-left:2em }
+#stream li { list-style-type:none }
 #stream blockquote a { color: #555 !important }
 
 #stream article.twitter { padding-top:10px; background-position:left 20px }
 #stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
-#stream article.markdown blockquote { font-size:85%; padding:0px 1em; }
 
 /* TODO: embed these into the CSS */
 #stream article.github { background-image:url(/static/icon/github.ico) }
@@ -64,3 +75,5 @@ header h1
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
 #stream article.markdown { background-image:url(/static/icon/markdown.ico) }
+
+#stream article.markdown .panel { font-size:95%; margin:10px 0px; padding:0em 1em; }
