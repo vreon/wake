@@ -1,0 +1,16 @@
+{% if event.children|count == 1 %}
+	{% with action = event.children[0] %}
+		<a href="{{ action.event_link }}">{{ action.summary|safe }}</a>
+		<time pubdate>{{ event.timestamp|relativetime }}</time>
+	{% endwith %}
+{% else %}
+	<a href="#" class="expand">did {{ event.children|count }} things <span class="indicator">&raquo;</span></a>
+	<time pubdate>{{ event.timestamp|relativetime }}</time>
+	<div class="detail">
+		<ul>
+			{% for child in event.children %}
+				<li><a href="{{ child.event_link }}">{{ child.summary|safe }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}
