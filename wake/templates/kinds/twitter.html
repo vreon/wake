@@ -1,1 +1,3 @@
-<blockquote>{{ event.content|tweet }}</blockquote> <a href="{{ event.event_link }}"><time>{{ event.timestamp|relativetime }}</time></a>
+<a href="{{ event.event_link }}">tweeted</a>
+<time>{{ event.timestamp|relativetime }}</time>
+<blockquote><p>{{ event.content|tweet }}</p></blockquote>

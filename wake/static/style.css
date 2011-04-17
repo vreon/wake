@@ -24,6 +24,14 @@ header h1
 	color:#fff;
 }
 
+header h1 a
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+header h1 a:hover { text-decoration:underline }
+
 footer
 {
 	color:#888;
@@ -50,12 +58,13 @@ footer img { vertical-align:middle }
 #stream blockquote, #stream .panel
 {
 	text-shadow:none;
-	margin:0;
-	padding:7px;
-	border:1px solid #ccc;
-	background-color:#eeeeec;
-    -moz-border-radius:4px; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px rgba(0,0,0,0.2);
-    -moz-box-shadow:1px 1px rgba(0,0,0,0.2);
+	border:1px solid #999;
+	background-color:#f3f3f9;
+    -moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	font-size:95%;
+	margin:10px 0px;
+	padding:0em 1em;
 }
 
 #stream article .detail { font-size:80%; display:none }
@@ -63,7 +72,6 @@ footer img { vertical-align:middle }
 #stream li { list-style-type:none }
 #stream blockquote a { color: #555 !important }
 
-#stream article.twitter { padding-top:10px; background-position:left 20px }
 #stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
 
@@ -75,5 +83,3 @@ footer img { vertical-align:middle }
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
 #stream article.markdown { background-image:url(/static/icon/markdown.ico) }
-
-#stream article.markdown .panel { font-size:95%; margin:10px 0px; padding:0em 1em; }
