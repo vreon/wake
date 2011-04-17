@@ -45,9 +45,7 @@ header h1
 	padding:7px;
 	border:1px solid #ccc;
 	background-color:#eeeeec;
-    -moz-border-radius:4px;
-    -webkit-border-radius:5px;
-    -webkit-box-shadow:1px 1px rgba(0,0,0,0.2);
+    -moz-border-radius:4px; -webkit-border-radius:5px; -webkit-box-shadow:1px 1px rgba(0,0,0,0.2);
     -moz-box-shadow:1px 1px rgba(0,0,0,0.2);
 }
 
@@ -63,3 +61,4 @@ header h1
 #stream article.grooveshark { background-image:url(/static/icon/grooveshark.ico) }
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
+#stream article.markdown { background:url(/static/icon/markdown.ico) }
