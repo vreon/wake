@@ -54,6 +54,8 @@ header h1
 #stream article.twitter { padding-top:10px; background-position:left 20px }
 #stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
+#stream article.markdown blockquote { font-size:85%; padding:0px 1em; }
+
 /* TODO: embed these into the CSS */
 #stream article.github { background-image:url(/static/icon/github.ico) }
 #stream article.lastfm { background-image:url(/static/icon/lastfm.ico) }
@@ -61,4 +63,4 @@ header h1
 #stream article.grooveshark { background-image:url(/static/icon/grooveshark.ico) }
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
-#stream article.markdown { background:url(/static/icon/markdown.ico) }
+#stream article.markdown { background-image:url(/static/icon/markdown.ico) }
