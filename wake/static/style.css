@@ -54,7 +54,7 @@ header h1
 #stream blockquote a { color: #555 !important }
 
 #stream article.twitter { padding-top:10px; background-position:left 20px }
-#stream article.flickr img { padding:5px; background-color:#eeeeec; border:1px solid #aaa }
+#stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
 /* TODO: embed these into the CSS */
 #stream article.github { background-image:url(/static/icon/github.ico) }
