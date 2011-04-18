@@ -40,8 +40,20 @@ footer
 	text-align:center;
 }
 
-footer a { color:#888; text-decoration:none }
-footer img { vertical-align:middle }
+footer a { vertical-align:middle; color:#888; text-decoration:none }
+#wake-credit
+{
+	width:116px;
+	height:16px;
+	background-repeat:no-repeat;
+	background-image:url('wake.png');
+	background-position:right -16px;
+	overflow:hidden;
+	display:block;
+	margin:0px auto;
+	text-indent:-9999999px; /* Bleh */
+}
+#wake-credit:hover { background-position:right 0px }
 
 #stream { max-width: 700px; margin:0 auto; padding:20px }
 #stream article
