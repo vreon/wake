@@ -96,5 +96,3 @@ footer a { vertical-align:middle; color:#888; text-decoration:none }
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
 #stream article.markdown { background-image:url(/static/icon/markdown.ico) }
-
-#comments { width: 500px; margin:1em auto 0px }
