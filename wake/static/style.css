@@ -88,7 +88,6 @@ footer a { vertical-align:middle; color:#888; text-decoration:none }
 
 #stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
-
 /* TODO: embed these into the CSS */
 #stream article.github { background-image:url(/static/icon/github.ico) }
 #stream article.lastfm { background-image:url(/static/icon/lastfm.ico) }
@@ -97,3 +96,5 @@ footer a { vertical-align:middle; color:#888; text-decoration:none }
 #stream article.flickr { background-image:url(/static/icon/flickr.ico) }
 #stream article.delicious { background-image:url(/static/icon/delicious.ico) }
 #stream article.markdown { background-image:url(/static/icon/markdown.ico) }
+
+#comments { width: 500px; margin:1em auto 0px }

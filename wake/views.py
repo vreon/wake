@@ -13,5 +13,5 @@ def by_slug(slug):
     events = list(store.events_by_slug(slug))
     if not events:
         abort(404)
-    return render_template('stream.html', events=events)
+    return render_template('single.html', event=events[0])
 
