@@ -3,7 +3,7 @@ html { overflow-y: scroll }
 body
 {
 	background:url('bg.png');
-	color:#333;
+	color:#123;
 	font: normal 12pt "Trebuchet MS", Helvetica, Arial, sans-serif;
 	padding:0;
 	margin:0;
@@ -73,6 +73,7 @@ footer a { vertical-align:middle; color:#888; text-decoration:none }
 {
 	text-shadow:none;
 	border:1px solid #999;
+	color:#333;
 	background-color:#eeeeec;
     -moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -80,11 +81,11 @@ footer a { vertical-align:middle; color:#888; text-decoration:none }
 	margin:10px 0px;
 	padding:0em 1em;
 }
+#stream blockquote a, #stream .panel a { color: #3465a4 }
 
 #stream article .detail { font-size:80%; display:none }
 #stream ul { padding-left:2em }
 #stream li { list-style-type:none }
-#stream blockquote a { color: #555 !important }
 
 #stream article.flickr img { padding:5px; margin-right:5px; background-color:#eeeeec; border:1px solid #aaa }
 
