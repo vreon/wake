@@ -1,5 +1,9 @@
-posted <a href="{{ url_for('by_slug', slug=event.slug) }}"><strong>{{ event.title }}</strong></a>
-<time>{{ event.timestamp|relativetime }}</time>
-<div class="panel">
-	{{ event.content|safe }}
-</div>
+<article class="panel">
+	<div class="panel-head">
+		<time class="right">{{ event.timestamp|formattime('%Y-%m-%d') }}</time>
+		<h2><a href="{{ url_for('by_slug', slug=event.slug) }}">{{ event.title }}</a></h2>
+	</div>
+	<div class="panel-body">
+		{{ event.content|safe }}
+	</div>
+</article>

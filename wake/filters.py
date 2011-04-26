@@ -20,5 +20,8 @@ def relative_time(timestamp):
     else:
         return str(delta_s / 86400) + " days ago"
 
+def format_time(timestamp, format_str='%Y-%m-%dT%H:%M:%S'):
+    return datetime.fromtimestamp(timestamp).strftime(format_str)
+
 def markup_tweet(text):
     return Markup(TwitterText(text).autolink.auto_link())

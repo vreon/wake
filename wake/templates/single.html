@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
+{% block title %}{{ event.title }} > {{ super() }}{% endblock %}
 {% block stream %}
-<section id="stream">
-    <article class="{{ event.kind }}">
+<div id="stream">
+    <div class="event {{ event.kind }}">
       {% if event.children %}
         {% include ["kinds/" + event.kind + "_multi.html", "kinds/multi.html"] %}
       {% else %}
         {% include ["kinds/" + event.kind + ".html", "kinds/generic.html"] %}
       {% endif %}
-	</article>
-</section>
+	</div>
+</div>
 {% endblock %}

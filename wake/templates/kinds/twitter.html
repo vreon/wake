@@ -1,2 +1,4 @@
-{{ event.content|tweet }}
-<a href="{{ event.event_link }}"><time>{{ event.timestamp|relativetime }}</time></a>
+<div class="tweet">
+	{{ event.content|tweet }}
+	<a href="{{ event.event_link }}"><time>{{ event.timestamp|relativetime }}</time></a>
+</div>
