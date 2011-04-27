@@ -9,7 +9,11 @@ store = CouchStore().load()
 
 @app.route('/')
 def wake():
-    return render_template('stream.html', events=store.collapsed_events())
+    try:
+        before = int(request.args.get('before'))
+    except (ValueError, TypeError):
+        before = None
+    return render_template('stream.html', events=store.collapsed_events(before=before))
 
 @app.route('/<year>/<month>/<slug>')
 def by_slug(year, month, slug):
