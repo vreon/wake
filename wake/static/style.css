@@ -149,8 +149,8 @@ header h1 a:hover { text-decoration:underline }
 .event.flickr { background-image:url(/static/icon/flickr.ico) }
 .event.delicious { background-image:url(/static/icon/delicious.ico) }
 .event.markdown { background-image:url(/static/icon/markdown.ico) }
-.event.reddit { background:url(/static/icon/reddit.ico) }
-.event.fanfiction { background:url(/static/icon/fanfiction.ico) }
+.event.reddit { background-image:url(/static/icon/reddit.ico) }
+.event.fanfiction { background-image:url(/static/icon/fanfiction.ico) }
 
 #more {
 	display:block;
