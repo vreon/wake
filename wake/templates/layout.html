@@ -45,7 +45,7 @@
                                 <p class="tel">+1-541-321-0042</p> 
                             </div> 
                             <div class="geeky"> <!-- The cool stuff --> 
-                                <a href="http://www.jessedubay.com/qr.png"><img class="qr" src="http://www.jessedubay.com/qr_small.png" alt="QR Code" title="You can scan this QR code with a mobile device to add me as a contact. Click to enlarge." /></a> 
+                                <a href="{{ url_for('static', filename='qr.png') }}"><img class="qr" src="{{ url_for('static', filename='qr_small.png') }}" alt="QR Code" title="You can scan this QR code with a mobile device to add me as a contact. Click to enlarge." /></a> 
                                 <p><pre class="gpg"><a class="url" href="http://pgp.mit.edu:11371/pks/lookup?search=0x0BECE18F&amp;op=vindex">GPG Fingerprint</a> 
 7C50 AACB E19D EDEA 8F31
 EFDA C826 1196 0BEC E18F</pre></p> 
