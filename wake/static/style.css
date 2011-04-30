@@ -172,13 +172,38 @@ header h1 a:hover { text-decoration:underline }
     -moz-box-shadow:1px 1px 2px rgba(0,0,0,0.1);
 }
 
-.panel-body { padding: 10px 15px }
+.panel-body { margin: 0px 15px }
 .panel-head ~ .panel-body { border-top:1px solid #fff }
 
+/****************
+ * Post styles! *
+ ****************/
 .panel-body p {
 	line-height: 1.5em;
+	margin:15px 0px;
     text-align: justify;
     word-wrap: break-word;
+}
+
+em { font-style:italic }
+
+table {
+	margin:25px auto;
+	-webkit-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow:1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+table th {
+	padding:3px;
+	border:1px solid #444;
+	text-shadow:rgba(255, 255, 255, 0.5) 0px 1px 0px;
+	color:#222;
+	background:#babdbc;
+}
+
+table td {
+	padding:3px;
+	border:1px solid #888;
 }
 
 .panel-head {
@@ -201,7 +226,7 @@ header h1 a:hover { text-decoration:underline }
 .panel-head .right { width:100px; float:right; text-align:right }
 
 /*vCard styles. Yay microformats :D */
-.vcard { margin-top:3px; margin-bottom:7px; background-color:#fff; padding:10px; overflow:auto; -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2); -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
+.vcard { margin-top:15px; margin-bottom:15px; background-color:#fff; padding:10px; overflow:auto; -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.2); -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.2); }
 .vcard p { margin: 0px }
 .vcard .photo { float: left; margin-right: 10px }
 .vcard .about, .vcard .flip { float:right; font-size: 0.8em }
