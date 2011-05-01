@@ -84,7 +84,8 @@ a:hover { color: #036; }
 */
 
 body {
-	background:url('bg.png');
+	background-color:#d0d2ce;
+	background-image:url('bg.png');
 	color:#123;
 	font: normal 11pt "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
