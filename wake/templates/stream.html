@@ -9,7 +9,7 @@
         {% include ["kinds/" + event.kind + ".html", "kinds/generic.html"] %}
       {% endif %}
     </li>
-	{% if loop.last %}
+	{% if loop.last and not loop.first %}
 		<li>
 			<a id="more" href="{{ url_for('wake', before=event.timestamp - 1) }}">Show more</a>
 		</li>
