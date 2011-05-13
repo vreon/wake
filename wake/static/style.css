@@ -4,6 +4,7 @@ body {
 	margin:30px;
 	background:-webkit-gradient(linear, 0 0, 0 400, from(#e6e6e6), to(#fff));
 	background:-moz-linear-gradient(top, #e6e6e6, #fff 400px);
+	background-repeat:no-repeat;
 }
 h1 { border-bottom:1px solid #ccc; padding-bottom:10px }
 #stream { list-style-type:none; margin:0px; padding:0px }
