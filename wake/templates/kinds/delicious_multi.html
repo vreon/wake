@@ -1,0 +1,15 @@
+{% if event.children|count == 1 %}
+    {% with event = event.children[0] %}
+        {% include "kinds/delicious.html" %}
+    {% endwith %}
+{% else %}
+    bookmarked {{ event.children|count }} links
+    <time>{{ event.timestamp|relativetime }}</time>
+    <div class="children">
+        <ul>
+            {% for child in event.children %}
+                <li><a href="{{ child.event_link }}">{{ child.data.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}

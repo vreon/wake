@@ -1,0 +1,15 @@
+{% if event.children|count == 1 %}
+	{% with event = event.children[0] %}
+            {% include "kinds/github.html" %}
+	{% endwith %}
+{% else %}
+	did {{ event.children|count }} things
+	<time>{{ event.timestamp|relativetime }}</time>
+	<div class="children">
+		<ul>
+			{% for child in event.children %}
+				<li><a href="{{ child.event_link }}">{{ child.summary|safe }}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endif %}

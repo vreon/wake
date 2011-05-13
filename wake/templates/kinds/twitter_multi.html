@@ -1,0 +1,15 @@
+{% if event.children|count == 1 %}
+    {% with event = event.children[0] %}
+        {% include "kinds/twitter.html" %}
+    {% endwith %}
+{% else %}
+    wrote {{ event.children|count }} tweets
+    <time>{{ event.timestamp|relativetime }}</time>
+    <div class="children">
+        <ul>
+            {% for child in event.children %}
+                <li><span class="tweet">{{ child.content|tweet }}</span></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
