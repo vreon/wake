@@ -8,6 +8,7 @@
 {% endblock %}
   </head>
   <body>
+	<h1><a href="{{ url_for('wake') }}"><img src="{{ url_for('static', filename='wake_160.png') }}" title="wake" alt="wake"></a></h1>
     {% block stream %}{% endblock %}
   </body>
 </html>
