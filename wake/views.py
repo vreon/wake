@@ -13,7 +13,9 @@ def wake():
         before = int(request.args.get('before'))
     except (ValueError, TypeError):
         before = None
-    return render_template('stream.html', events=store.collapsed_events(before=before))
+    events = store.collapsed_events(before=before)
+    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog')
+    return render_template('stream.html', events=events, recent_posts=recent_posts)
 
 @app.route('/<year>/<month>/<slug>')
 def by_slug(year, month, slug):
@@ -24,7 +26,8 @@ def by_slug(year, month, slug):
     timestamp = datetime.fromtimestamp(event['timestamp'])
     if not timestamp.strftime('%Y') == year or not timestamp.strftime('%m') == month:
         abort(404)
-    return render_template('single.html', event=event)
+    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog')
+    return render_template('single.html', event=event, recent_posts=recent_posts)
 
 @app.route('/recent.atom')
 def recent_feed():

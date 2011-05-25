@@ -65,6 +65,27 @@ EFDA C826 1196 0BEC E18F</pre></p>
 					</div>
 				</div>
 				-->
+
+				{% if recent_posts %}
+					<div class="panel">
+						<div class="panel-head">
+							<h2>Recent Posts</h2>
+						</div>
+						<div class="panel-body">
+							<p>
+								<ul>
+									{% for event in recent_posts %}
+										{% if event.title %}
+											<li><a href="{{ url_for('by_slug', year=event.timestamp|formattime('%Y'), month=event.timestamp|formattime('%m'), slug=event.slug) }}">{{ event.title }}</a></li>
+										{% endif %}
+									{% endfor %}
+								</ul>
+							</p>
+						</div>
+					</div>
+				{% endif %}
+
+                                {% block sidebar %}{% endblock %}
 			</div>
 
 			<div id="main" role="main">
