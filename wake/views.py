@@ -14,7 +14,7 @@ def wake():
     except (ValueError, TypeError):
         before = None
     events = store.collapsed_events(before=before)
-    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog')
+    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog', descending=False)
     return render_template('stream.html', events=events, recent_posts=recent_posts)
 
 @app.route('/<year>/<month>/<slug>')
@@ -26,7 +26,7 @@ def by_slug(year, month, slug):
     timestamp = datetime.fromtimestamp(event['timestamp'])
     if not timestamp.strftime('%Y') == year or not timestamp.strftime('%m') == month:
         abort(404)
-    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog')
+    recent_posts = store.events(count=10, source='markdown:/home/vreon/Dropbox/Documents/Blog', descending=False)
     return render_template('single.html', event=event, recent_posts=recent_posts)
 
 @app.route('/recent.atom')
