@@ -143,15 +143,25 @@ header h1 a:hover { text-decoration:underline }
 .event.twitter .tweet a { color:#666 }
 .event.twitter .tweet time { color:#ccc; text-shadow:none }
 
-.event.github { background-image:url(/static/icon/github.ico) }
-.event.lastfm { background-image:url(/static/icon/lastfm.ico) }
-.event.twitter { background-image:url(/static/icon/twitter.ico) }
-.event.grooveshark { background-image:url(/static/icon/grooveshark.ico) }
-.event.flickr { background-image:url(/static/icon/flickr.ico) }
-.event.delicious { background-image:url(/static/icon/delicious.ico) }
-.event.markdown { background-image:url(/static/icon/markdown.ico) }
-.event.reddit { background-image:url(/static/icon/reddit.ico) }
-.event.fanfiction { background-image:url(/static/icon/fanfiction.ico) }
+.github { background-image:url(/static/icon/github.ico) }
+.lastfm { background-image:url(/static/icon/lastfm.ico) }
+.twitter { background-image:url(/static/icon/twitter.ico) }
+.grooveshark { background-image:url(/static/icon/grooveshark.ico) }
+.flickr { background-image:url(/static/icon/flickr.ico) }
+.delicious { background-image:url(/static/icon/delicious.ico) }
+.markdown { background-image:url(/static/icon/markdown.ico) }
+.reddit { background-image:url(/static/icon/reddit.ico) }
+.fanfiction { background-image:url(/static/icon/fanfiction.ico) }
+.facebook { background-image:url(/static/icon/facebook.ico) }
+.hackernews { background-image:url(/static/icon/hackernews.ico) }
+
+#elsewhere { margin-left:5px }
+#elsewhere li {
+	list-style-type:none;
+	padding-left:22px;
+	background-position: left 1px;
+	background-repeat:no-repeat;
+}
 
 #more {
 	display:block;

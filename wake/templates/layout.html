@@ -66,7 +66,28 @@ EFDA C826 1196 0BEC E18F</pre></p>
 				</div>
 				-->
 
+				<!-- Elsewhere panel -->
+				<div class="panel">
+					<div class="panel-head">
+						<h2>Elsewhere</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							<ul id="elsewhere">
+								<li class="twitter"><a href="http://twitter.com/aquadoctorbob">@aquadoctorbob</a></li>
+								<li class="facebook"><a href="http://facebook.com/jesse.dubay">Facebook profile</a></li>
+								<li class="github"><a href="http://github.com/vreon">Github profile</a></li>
+								<li class="reddit"><a href="http://reddit.com/user/aquadoctorbob">Reddit profile</a></li>
+								<li class="hackernews"><a href="http://news.ycombinator.com/user?id=aquadoctorbob">Hacker News profile</a></li>
+								<li class="flickr"><a href="http://flickr.com/photos/aquadoctorbob">Flickr photostream</a></li>
+								<li class="grooveshark"><a href="http://grooveshark.com/user/vreon">Grooveshark profile</a></li>
+							</ul>
+						</p>
+					</div>
+				</div>
+
 				{% if recent_posts %}
+					<!-- Recent posts panel -->
 					<div class="panel">
 						<div class="panel-head">
 							<h2>Recent Posts</h2>
@@ -85,7 +106,7 @@ EFDA C826 1196 0BEC E18F</pre></p>
 					</div>
 				{% endif %}
 
-                                {% block sidebar %}{% endblock %}
+				{% block sidebar %}{% endblock %}
 			</div>
 
 			<div id="main" role="main">
