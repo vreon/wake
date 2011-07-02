@@ -1,11 +1,11 @@
-from been.couch import CouchStore
+from been.redis_store import RedisStore
 from flask import render_template, abort, request, url_for
 from urlparse import urljoin
 from werkzeug.contrib.atom import AtomFeed
 from datetime import datetime
 from wake import app
 
-store = CouchStore().load()
+store = RedisStore().load()
 
 @app.route('/')
 def wake():

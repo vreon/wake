@@ -15,6 +15,7 @@ setup(name='wake',
     packages=find_packages(),
     install_requires=[
         'CouchDB',
+        'redis',
         'Flask',
         'twitter-text-py',
         'been',
