@@ -1,11 +1,12 @@
-from been.redis_store import RedisStore
+from been.core import Been
+from been.source import *
 from flask import render_template, abort, request, url_for
 from urlparse import urljoin
 from werkzeug.contrib.atom import AtomFeed
 from datetime import datetime
 from wake import app
 
-store = RedisStore().load()
+store = Been().init().store
 
 @app.route('/')
 def wake():
