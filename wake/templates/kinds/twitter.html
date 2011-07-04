@@ -1,2 +1,3 @@
+{% from "_macro.html" import timestamp %}
 <span class="tweet">{{ event.content|tweet }}</span>
-<time>{{ event.timestamp|relativetime }}</time>
+{{ timestamp(event) }}

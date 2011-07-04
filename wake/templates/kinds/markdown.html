@@ -1,2 +1,3 @@
-posted <a href="{{ url_for('by_slug', slug=event.slug) }}">{{ event.title }}</a> <time>{{ event.timestamp|relativetime }}</time>
+{% from "_macro.html" import timestamp %}
+posted <a href="{{ url_for('by_slug', slug=event.slug) }}">{{ event.title }}</a> {{ timestamp(event) }}
 <div class="content">{{ event.content|safe }}</div>

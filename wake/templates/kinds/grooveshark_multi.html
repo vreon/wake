@@ -1,10 +1,11 @@
+{% from "_macro.html" import timestamp %}
 {% if event.children|count == 1 %}
     {% with event = event.children[0] %}
         {% include "kinds/grooveshark.html" %}
     {% endwith %}
 {% else %}
     favorited {{ event.children|count }} songs
-    <time>{{ event.timestamp|relativetime }}</time>
+    {{ timestamp(event) }}
     <div class="children">
         <ul>
             {% for child in event.children %}

@@ -1,3 +1,4 @@
+{% from "_macro.html" import timestamp %}
 posted
 {% if event.children|count == 1 %}
 	{% with photo = event.children[0] %}
@@ -6,7 +7,7 @@ posted
 {% else %}
 	{{ event.children|count }} photos
 {% endif %}
-<time>{{ event.timestamp|relativetime }}</time>
+{{ timestamp(event) }}
 <p>
 	{% for child in event.children -%}
 		<a href="{{ child.event_link }}"><img src="{{ child.data.media_thumbnail[0].url }}" title="{{ child.data.title }}" /></a>

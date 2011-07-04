@@ -1,2 +1,3 @@
+{% from "_macro.html" import timestamp %}
 <a href="{{ event.event_link }}">{{ event.summary|safe }}</a>
-<time>{{ event.timestamp|relativetime }}</time>
+{{ timestamp(event) }}

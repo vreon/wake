@@ -1,5 +1,6 @@
+{% from "_macro.html" import timestamp %}
 posted photo <a href="{{ event.event_link }}">{{ event.data.title }}</a>
-<time>{{ event.timestamp|relativetime }}</time>
+{{ timestamp(event) }}
 <p>
     <a href="{{ event.event_link }}"><img src="{{ event.data.media_thumbnail[0].url }}" title="{{ event.data.title }}" /></a>
 </p>
