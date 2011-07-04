@@ -1,3 +1,2 @@
 {% from "_macro.html" import timestamp %}
-listened to <a href="http://last.fm/music/{{ event.artist|quoteplus }}">{{ event.artist }}</a>
-{{ timestamp(event) }}
+listened to <a href="http://last.fm/music/{{ event.artist|quoteplus }}">{{ event.artist }}</a> {{ timestamp(event) }}
