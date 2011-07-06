@@ -1,12 +1,12 @@
-from been.core import Been
-from been.source import *
 from flask import render_template, abort, request, url_for
 from urlparse import urljoin
 from werkzeug.contrib.atom import AtomFeed
 from datetime import datetime
+
+from been import Been
 from wake import app
 
-store = Been().init().store
+been = Been()
 
 @app.route('/')
 def wake():
@@ -14,11 +14,11 @@ def wake():
         before = int(request.args.get('before'))
     except (ValueError, TypeError):
         before = None
-    return render_template('stream.html', events=store.collapsed_events(before=before))
+    return render_template('stream.html', events=been.store.collapsed_events(before=before))
 
 @app.route('/<slug>')
 def by_slug(slug):
-    events = list(store.events_by_slug(slug))
+    events = list(been.store.events_by_slug(slug))
     if not events:
         abort(404)
     return render_template('stream.html', events=events)
@@ -27,8 +27,8 @@ def by_slug(slug):
 def recent_feed():
     feed = AtomFeed('Recent Posts', feed_url=request.url, url=request.url_root,
                     generator=('Wake', None, None))
-    sources = store.get_sources()
-    for event in store.events():
+    sources = been.store.get_sources()
+    for event in been.store.events():
         if sources[event['source']].get('syndicate'):
             feed.add(event['title'],
                      unicode(event['content']),
